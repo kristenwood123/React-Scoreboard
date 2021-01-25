@@ -1,5 +1,6 @@
 import React, { Component }  from 'react'
 
+
 class Stopwatch extends Component {
 
   state = {
@@ -10,6 +11,10 @@ class Stopwatch extends Component {
 
     componentDidMount() {
     this.intervalId = setInterval(() => this.tick(), 100)
+  }
+
+  componentWillUnmout() {
+    clearInterval(this.intervalId)
   }
 
   tick = () => {
