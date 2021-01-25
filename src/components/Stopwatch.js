@@ -22,7 +22,6 @@ class Stopwatch extends Component {
     }
   }
 
-
   handleStopWatch = () => {
     this.setState(prevState => ({
       isRunning: !prevState.isRunning
